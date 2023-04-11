@@ -76,7 +76,7 @@ sh make.sh
             └── snapshot.pth.tar
     ```
     The `datalist` folder and the pkl files denotes the dataset-list generated during running the code. 
-    You can choose to download them [here](https://drive.google.com/file/d/1pfghhGnS5wI23UtF3a4IgBbXz-e2hgYI/view?usp=share_link), and manually put them under the `datalist` folder.
+
 
 * In `config.py`, set `interhand_anno_dir`, `interhand_images_path` to the dataset abs directory.
 * In `config.py`, set `cur_dir` to the a2j-transformer code directory.
