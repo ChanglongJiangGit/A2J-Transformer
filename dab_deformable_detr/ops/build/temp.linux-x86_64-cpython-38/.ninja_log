@@ -1,7 +1,0 @@
-# ninja log v5
-0	4331	1679139496513782543	/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-38/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/src/cpu/ms_deform_attn_cpu.o	e5275a58a972aad7
-1	12199	1679139504369771995	/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-38/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/src/cuda/ms_deform_attn_cuda.o	4d63f9a8b5055438
-1	24178	1679139516345755838	/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-38/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/src/vision.o	88dd7ad6ddf5cffd
-3	4000	1679141555962982953	/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-38/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/src/cpu/ms_deform_attn_cpu.o	e21fd8c225d636f5
-4	11334	1679141563286994075	/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-38/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/src/cuda/ms_deform_attn_cuda.o	92772fe5bb9d14
-4	22547	1679141574499010908	/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-38/data/data2/a2jformer/camera_ready/dab_deformable_detr/ops/src/vision.o	3f829870476a0f61

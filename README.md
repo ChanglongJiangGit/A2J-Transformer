@@ -7,6 +7,10 @@ Paper link here: [A2J-Transformer: Anchor-to-Joint Transformer Network for 3D In
 
 # About our code 
 
+## Updates 
+
+* (2023-4-23) Deleted some compiled files in the `dab_deformable_detr\ops` folder.
+
 
 ## Installation and Setup
 
