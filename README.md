@@ -101,6 +101,7 @@ sh make.sh
 
 
 # Cite
+Our code is protected by patents and *cannot be used for commercial purposes*. If you have commercial needs, please contact us: `Yang_Xiao@hust.edu.cn`.
 If you find our work useful in your research or publication, please cite our work:
 ```
 @inproceedings{jiang2023a2j,
