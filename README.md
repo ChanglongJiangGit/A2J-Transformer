@@ -79,7 +79,7 @@ sh make.sh
     |   └── ...pkl
     └── output/
         └── model_dump/
-            └── snapshot.pth.tar
+            └── snapshot_0.pth.tar
     ```
     The `datalist` folder and the pkl files denotes the dataset-list generated during running the code. 
 
