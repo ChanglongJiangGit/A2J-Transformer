@@ -126,7 +126,8 @@ class Trainer(Base):
 
 class Tester(Base):
     
-    def __init__(self):
+    def __init__(self, test_epoch):
+        self.test_epoch = int(test_epoch)
         super(Tester, self).__init__(log_name = 'test_logs.txt')
 
     def _make_batch_generator(self, test_set):
@@ -140,7 +141,7 @@ class Tester(Base):
         self.testset = testset_loader
     
     def _make_model(self):
-        model_path = os.path.join(cfg.model_dir, 'snapshot.pth.tar')
+        model_path = os.path.join(cfg.model_dir, 'snapshot_%d.pth.tar' % self.test_epoch)
         assert os.path.exists(model_path), 'Cannot find model at ' + model_path
         self.logger.info('Load checkpoint from {}'.format(model_path))
         

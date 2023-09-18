@@ -23,6 +23,8 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--gpu', type=str, default='6,7', dest='gpu_ids')
     parser.add_argument('--test_set', type=str, default='test', dest='test_set')
+    parser.add_argument('--test_epoch', type=str, default='0', dest='test_epoch')
+    
     args = parser.parse_args()
 
     if not args.gpu_ids:
@@ -46,7 +48,7 @@ def test():
     else:
         args.test_set = 'test'
 
-    tester = Tester()
+    tester = Tester(args.test_epoch)
     tester._make_batch_generator(args.test_set)
     tester._make_model()
     
