@@ -9,6 +9,7 @@ Paper link here: [A2J-Transformer: Anchor-to-Joint Transformer Network for 3D In
 
 ## Updates 
 
+* (2023-9-18) Training code released! All training codes for Interhand 2.6M, NYU and HANDS 2017 dataset.
 * (2023-4-23) Deleted some compiled files in the `dab_deformable_detr\ops` folder.
 
 
@@ -89,3 +90,23 @@ sh make.sh
     python test.py --gpu <your_gpu_ids>
     ```
     You can also choose to change the `gpu_ids` in `test.py`.
+
+
+### NYU and HANDS 2017 dataset
+
+* Please use our code following [A2J](https://github.com/zhangboshen/A2J) to prepare the datasets.
+* If you have prepared, just run the `nyu.py` and `hands2017.py`.
+
+
+
+# Cite
+If you find our work useful in your research or publication, please cite our work:
+```
+@inproceedings{jiang2023a2j,
+  title={A2J-Transformer: Anchor-to-Joint Transformer Network for 3D Interacting Hand Pose Estimation from a Single RGB Image},
+  author={Jiang, Changlong and Xiao, Yang and Wu, Cunlin and Zhang, Mingyang and Zheng, Jinghong and Cao, Zhiguo and Zhou, Joey Tianyi},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={8846--8855},
+  year={2023}
+}
+```

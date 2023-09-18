@@ -135,6 +135,7 @@ class A2J_model(nn.Module):
         nn.init.constant_(self.anchor_weights[0].layers[-1].bias.data[2:], -2.0)
 
         self.generate_keypoints_coord_new = generate_keypoints_coord_new(self.num_classes, is_3D = self.is_3D)
+        self.a2jloss_new = a2jloss_new(is_3D = self.is_3D, use_lvl_weights= self.use_lvl_weights)
 
 
     
@@ -143,6 +144,11 @@ class A2J_model(nn.Module):
         input_img = inputs['img']
         input_mask = inputs['mask']
         batch_size = input_img.shape[0]
+        if cfg.dataset == 'nyu' or cfg.dataset == 'hands2017':
+            n, c, h, w = input_img.size()  # x: [B, 1, H ,W]
+            input_img = input_img[:,0:1,:,:]  # depth
+            input_img = input_img.expand(n,3,h,w) ## convert depth to rgb domain
+        
         samples = NestedTensor(input_img,input_mask.squeeze(1))
 
         ## get pyramid features
@@ -209,8 +215,19 @@ class A2J_model(nn.Module):
 
         ## generate final coords
         keypoints_coord, anchor = self.generate_keypoints_coord_new(total_outputs_coord, total_outputs_weights, total_references)
+        
+        ## get loss
+        anchor_loss, regression_loss = self.a2jloss_new(keypoints_coord, anchor, targets['joint_coord'], meta_info['joint_valid'])
+        
+        if mode == 'train':
+            loss = {}
+            loss['Cls_loss'] = anchor_loss
+            loss['Reg_loss'] = regression_loss
+            loss['A2Jloss'] = 1*anchor_loss + regression_loss* cfg.RegLossFactor 
+            loss['total_loss'] =loss['A2Jloss']
+            return loss
 
-        if mode == 'test':
+        elif mode == 'test':
             ## use the result of last layer as the final result
             pred_keypoints = keypoints_coord[-1]
             out = {}

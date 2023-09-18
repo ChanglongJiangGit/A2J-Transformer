@@ -18,7 +18,7 @@ def clean_file(path):
 
 class Config:
     # ~~~~~~~~~~~~~~~~~~~~~~Dataset~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-    dataset = 'InterHand2.6M'  # InterHand2.6M
+    dataset = 'InterHand2.6M'  # InterHand2.6M  nyu hands2017
     pose_representation = '2p5D' #2p5D
 
 
@@ -47,6 +47,12 @@ class Config:
     masks = False
     backbone = 'resnet50' 
     dilation = True # If true, we replace stride with dilation in the last convolutional block (DC5)
+    if dataset == 'InterHand2.6M':
+        keypoint_num = 42
+    elif dataset == 'nyu':
+        keypoint_num = 14
+    elif dataset == 'hands2017':
+        keypoint_num = 21
 
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~transformer config~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
