@@ -9,8 +9,8 @@ Paper link here: [A2J-Transformer: Anchor-to-Joint Transformer Network for 3D In
 
 ## Updates 
 
-* (2023-9-18) Training code released! All training codes for Interhand 2.6M, NYU and HANDS 2017 dataset.
-* (2023-9-18) Updated `test.py` and `base.py`, added the argparse `test_epoch`. Updated the name of our pre-trained model, from `snapshot.pth.tar` to `snapshot_0.pth.tar`.
+* (2023-9-19) Training code released! All training codes for Interhand 2.6M, NYU and HANDS 2017 dataset.
+* (2023-9-19) Updated `test.py` and `base.py`, added the argparse `test_epoch`. Updated the name of our pre-trained model, from `snapshot.pth.tar` to `snapshot_0.pth.tar`.
 * (2023-4-23) Deleted some compiled files in the `dab_deformable_detr\ops` folder.
 
 
