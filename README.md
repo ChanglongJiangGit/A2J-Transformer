@@ -5,6 +5,14 @@ This is the official implementation for the paper, **"A2J-Transformer: Anchor-to
 
 Paper link here: [A2J-Transformer: Anchor-to-Joint Transformer Network for 3D Interacting Hand Pose Estimation from a Single RGB Image](https://arxiv.org/abs/2304.03635)
 
+
+🔥🔥🔥 The extension of our paper is now open!  **"3D Hand Pose Estimation via Articulated Anchor-to-Joint 3D Local Regressors"**, published in **TPAMI 2026**.
+
+
+🔥🔥🔥 **TPAMI 2026 Paper**: [Paper](https://doi.org/10.1109/TPAMI.2025.3609907) | [Code](https://github.com/ChanglongJiangGit/A2J-Transformer-Plus) | [Project](https://changlongjianggit.github.io/A2J-Transformer-Plus/)
+
+🔥🔥🔥 **CVPR 2023 Paper**: [Paper](https://arxiv.org/abs/2304.03635) | [Code](https://github.com/ChanglongJiangGit/A2J-Transformer)
+
 # About our code 
 
 ## Updates 
